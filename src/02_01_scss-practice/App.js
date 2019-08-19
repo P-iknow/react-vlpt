@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.scss';
-import Button from './Style/Button';
+import Button from './Button';
 
 function App() {
   return (
