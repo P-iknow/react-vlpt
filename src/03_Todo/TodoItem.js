@@ -62,7 +62,6 @@ function TodoItem({ id, done, text }) {
   const dispatch = useTodoDispatch();
   const onToggle = () => dispatch({ type: 'TOGGLE', id});
   const onRemove = () => dispatch({ type: 'REMOVE', id});
-  console.log("todoItem이 새로 불리고 있다")
 
   return (
     <TodoItemBlock>
