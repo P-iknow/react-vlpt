@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './04_API/App'
+import App from '../src/05_Router/App';
 import * as serviceWorker from './serviceWorker';
+import '../src/06_Redux/exercise';
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
