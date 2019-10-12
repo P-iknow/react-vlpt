@@ -25,7 +25,7 @@ export default function counter(state = initialState, action) {
     case SET_DIFF:
       return {
         ...state,
-        number: state.number + state.diff,
+        diff: action.diff,
       };
     case INCREASE:
       return {

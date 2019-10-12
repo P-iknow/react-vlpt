@@ -7,12 +7,13 @@ import * as serviceWorker from './serviceWorker';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import rootReducer from './06_Redux/modules';
+import { composeWithDevTools } from 'redux-devtools-extension';
 
-const store = createStore(rootReducer); // 스토어를 만든다.
+const store = createStore(rootReducer, composeWithDevTools()); // 스토어를 만든다.
 console.dir(store.getState()); // 스토어의 상태를 확인해보자
 
 ReactDOM.render(
-  <Provider>
+  <Provider store={store}>
     <App />
   </Provider>,
   document.getElementById('root')
