@@ -97,20 +97,19 @@ const ShortMarginButton = styled(Button)`
   }
 `;
 
-function Dialog({
+const Dialog = ({
   title,
   children,
   confirmText,
   cancelText,
   onConfirm,
   onCancel,
-  visible
-}) {
-
+  visible,
+}) => {
   const [animate, setAnimate] = useState(false);
   const [localVisible, setLocalVisible] = useState(visible);
 
-  useEffect( () => {
+  useEffect(() => {
     // visible 값이 true -> false가 되는 것을 감지
 
     if (localVisible && !visible) {
@@ -137,11 +136,11 @@ function Dialog({
       </DialogBlock>
     </DarkBackground>
   );
-}
+};
 
 Dialog.defaultProps = {
   confirmText: '확인',
-  cancelText: '취소'
+  cancelText: '취소',
 };
 
 export default Dialog;

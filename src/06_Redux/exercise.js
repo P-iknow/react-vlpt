@@ -1,5 +1,9 @@
 import { createStore } from 'redux';
 
+// createStore는 스토어를 만들어주는 함수다
+// 리엑트 프로젝트에서는 단 하나의 스토어를 만든다
+
+// 리덕스에서 관리 할 상태 정의
 const initialState = {
   counter: 0,
   text: '',
@@ -23,7 +27,7 @@ const decrease = () => ({
 
 const changeText = text => ({
   type: CHANGE_TEXT,
-  text,
+  text, // 액션안에는 type 외에 추가적인 필트를 마음대로 넣을 수 있다.
 });
 
 const addToList = item => ({
@@ -31,6 +35,9 @@ const addToList = item => ({
   item,
 });
 
+/* 리듀서 만들기 */
+// 위 액션 생성함수들을 통해 만들어진 객체들을 참조하며
+// 새로운 상태를 만드는 함수를 만들어
 const reducer = (state = initialState, action) => {
   // state 의 초깃값을 initialState 로 지정했습니다.
   switch (action.type) {

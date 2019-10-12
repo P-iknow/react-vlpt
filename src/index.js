@@ -1,11 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from '../src/05_Router/App';
+import App from './App';
+// import App from './App';
 import * as serviceWorker from './serviceWorker';
-import '../src/06_Redux/exercise';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+import rootReducer from './06_Redux/modules';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const store = createStore(rootReducer); // 스토어를 만든다.
+console.dir(store.getState()); // 스토어의 상태를 확인해보자
+
+ReactDOM.render(
+  <Provider>
+    <App />
+  </Provider>,
+  document.getElementById('root')
+);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
