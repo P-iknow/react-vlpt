@@ -1,6 +1,6 @@
 import React from 'react';
-import CounterContainers from '../src/06_Redux/containers/CounterContainers';
-import TodosContainer from '../src/06_Redux/containers/TodosContainer';
+import CounterContainers from './containers/CounterContainers';
+import TodosContainer from './containers/TodosContainer';
 
 function App() {
   return (
