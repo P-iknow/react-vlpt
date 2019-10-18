@@ -9,6 +9,7 @@ import rootReducer from './07_Redux-middleware/modules';
 import logger from 'redux-logger';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import ReduxThunk from 'redux-thunk';
+import { BrowserRouter } from 'react-router-dom';
 
 const store = createStore(
   rootReducer,
@@ -17,9 +18,11 @@ const store = createStore(
 console.dir(store.getState()); // 스토어의 상태를 확인해보자
 
 ReactDOM.render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
+  <BrowserRouter>
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </BrowserRouter>,
   document.getElementById('root')
 );
 
