@@ -15,7 +15,7 @@ const store = createStore(
   rootReducer,
   composeWithDevTools(applyMiddleware(ReduxThunk, logger))
 ); // 스토어를 만든다.
-console.dir(store.getState()); // 스토어의 상태를 확인해보자
+// console.dir(store.getState()); // 스토어의 상태를 확인해보자
 
 ReactDOM.render(
   <BrowserRouter>
