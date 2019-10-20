@@ -24,7 +24,7 @@ const PostContainer = ({ postId }) => {
   return (
     <>
       <button onClick={() => dispatch(goToHome())}>홈으로 이동</button>
-      <Post post={data} />;
+      <Post post={data} />
     </>
   );
 };
